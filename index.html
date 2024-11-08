@@ -242,14 +242,14 @@
                     >
                         <img
                             src="/assets/images/homepage/Items_vr.jpg"
-                            alt="aaaa"
+                            alt="VR"
                             class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
                         />
 
                         <div class="menu-btn tw-text-xl">VR</div>
                     </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-gap-5 md:tw-h-[700px]">
+                <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-5 md:tw-h-[700px]">
                     <div
                         class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
                     >
@@ -316,11 +316,15 @@
                 </div>
                 <form
                     class="tw-mt-4 tw-flex tw-max-w-[350px] tw-flex-col tw-gap-3"
+                      action="procesar-formulario.php" method="POST"
                 >
+                    
+                                        
                     <div class="tw-flex tw-flex-col tw-gap-4">
-                        <div class="tw-flex tw-flex-col tw-gap-1">
+                        <div for="nombre" class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Nombre</div>
                             <input
+                                id="nombre"
                                 type="text"
                                 class="input"
                                 maxlength="10"
@@ -328,18 +332,11 @@
                                 placeholder="nombre"
                             />
                         </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <div class="tw-text-gray-500">Telefono</div>
-                            <input
-                                type="text"
-                                class="input"
-                                required
-                                placeholder="telefono"
-                            />
-                        </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
+                        
+                        <div for="email" class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Email</div>
                             <input
+                                id="email"   
                                 type="email"
                                 class="input"
                                 required
@@ -347,22 +344,24 @@
                                 id="email"
                             />
                         </div>
-                        <div class="tw-flex tw-flex-col tw-gap-1">
+                        <div for="mensaje" class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Asunto</div>
                             <input
+                                id="mensaje"   
                                 type="text"
                                 class="input"
                                 maxlength="100"
-                                placeholder="Asunto"
+                                placeholder=""
                             />
                         </div>
                     </div>
 
                     
 
-                    <!-- Aquí va el reCAPTCHA de Google -->
+                    <!-- Aquí va el reCAPTCHA de Google --
         <div class="g-recaptcha" data-sitekey="6LeVdHgqAAAAANX_pWmcAvC_BlEOyh_yKGJwU5rm"></div>
-
+-->
+                    
                     <button
                         type="submit"
                         class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
