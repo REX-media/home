@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>REX media</title>
+        <meta
+            name="description"
+            content="Somos una empresa dedicada al desarrollo de videos corporativos en 3D, aplicaciones interactivas y experiencias de realidad virtual, 
+                     integrando distintas tecnologías y disciplinas creativas para diseñar soluciones a la medida de los desafíos que enfrentan nuestros clientes"
+        />
+
+       
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="REXmedia" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://rex-media.cl" />
+        <!--current website url-->
+        <meta property="og:image" content="REXmedia" />
+
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/RM-Isologo-blanco.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+        />
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-[#ffffff]"
+    >
+        <header
+            class="tw-fixed tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-px-[10%] max-md:tw-mr-auto md:tw-justify-around"
+        >
+            <div
+                style="background-color: #738595" class="tw-absolute tw-left-0 tw-top-0 tw-z-[-1] tw-h-0 tw-w-full  tw-shadow-lg"
+                id="expanding-header-bg"
+            >
+                <!-- expands the background as scroll -->
+            </div>
+
+            <div class="tw-h-[50px] tw-w-[150px] tw-p-[4px]">
+                <img
+                    src="./assets/logo/RM-Logo-blanco.svg"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </div>
+            <div
+                class="collapsible-header animated-collapse"
+                id="collapsed-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-white max-md:tw-mt-[30px] max-md:tw-flex-col max-md:tw-place-items-end max-md:tw-gap-5 md:tw-mx-auto md:tw-place-items-center"
+                >
+                    <a class="header-links" href="#nosotros"> Nosotros </a>
+                    <a class="header-links" href="#servicios"> Servicios </a>
+                    <a class="header-links" href="#contacto"> Contacto </a>
+                    
+                </div>
+                <div
+                    class="tw-flex tw-place-items-center tw-gap-[20px] tw-text-xl max-md:tw-w-full max-md:tw-place-content-center max-md:!tw-text-white"
+                >
+                    <a
+                        href="https://www.youtube.com/@REXmedia3D"
+                        target="_blank"
+                        rel="no-referrer"
+                        area-label="youtube"
+                        class="header-links tw-duration-[0.3s]"
+                    >
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/rexmedia3d/"
+                        target="_blank"
+                        rel="no-referrer"
+                        area-label="instagram"
+                        class="header-links tw-duration-[0.3s]"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white md:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            >
+                <!-- <i class="bi bi-list"></i> -->
+            </button>
+        </header>
+
+        <section
+            class="tw-relative tw-flex tw-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-md:tw-h-[100dvh]"
+            id="hero-section"
+        >
+            <img
+                src="./assets/images/homepage/DALL%C2%B7E%20galpon.webp"
+                alt="Restaurant"
+                class="tw-h-full tw-w-full tw-object-cover"
+            />
+            <div
+                class="tw-absolute tw-h-full tw-w-full tw-bg-[#0000007d]"
+            ></div>
+            <div
+                class="tw-absolute tw-left-[50%] tw-top-[50%] tw-flex tw-w-full tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-p-2 tw-text-white"
+            >
+                <img
+                    src="/assets/images/homepage/RM-isologo-color.png"
+                    alt="logo-color"
+                    class="tw-h-[250px] tw-w-[250px] max-md:tw-h-[150px] max-md:tw-w-[150px] tw-shadow-lg"
+                />
+
+                <img
+                    src="./assets/logo/RM-Logo-blanco.svg"
+                    alt="logo"
+                    class="tw-object tw-max-w-[550px] max-md:tw-h-[350px] max-md:tw-w-[350px] tw-shadow-lg"
+                />
+                
+                  <h2 
+                      class="roboto-regular-italic max-md:tw-text-center max-md:tw-text-xl max-md:tw-w-[400px]
+                             tw-shadow-lg tw-mt-6 tw-text-justify
+                             tw-mt-6 tw-max-w-[450px]"
+                      >
+                        Videos corporativos en 3D, aplicaciones interactivas y experiencias de realidad virtual, 
+                        combinando diversas tecnologías y áreas creativas.
+                </h2>
+                
+            </div>
+        </section>
+
+        <section
+            class="tw-flex tw-min-h-[60vh] tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#fff] tw-p-4 tw-px-[20%] max-md:tw-flex-col max-md:tw-gap-[4%] max-md:tw-px-[5%]"
+                 id="nosotros"
+        >
+            <div
+                class="tw-flex tw-h-[350px] tw-w-[350px] tw-overflow-hidden tw-rounded-md max-md:tw-mt-[5%] max-md:tw-h-[300px] max-md:tw-w-[300px]"
+            >
+                <img
+                    src="./assets/images/homepage/Items_Design.jpg"
+                    alt="EdicionPC"
+                    class="tw-w-full tw-object-cover"
+                />
+            </div>
+            <div
+                class="tw-flex tw-h-full tw-flex-col tw-gap-[5%] max-md:tw-mt-2 max-md:tw-gap-[3%] max-md:tw-text-center"
+            >
+                <h2
+                    class="roboto-thin tw-text-3xl tw-font-medium max-md:tw-text-2xl"
+                >
+                    REX MEDIA
+                </h2>
+                <h3 class="roboto-bold tw-text-5xl max-md:tw-text-3xl">Nosotros</h3>
+                <div class="roboto-regular tw-mt-6 tw-max-w-[350px] tw-text-justify">
+                    
+                    Nos especializamos en la creación de videos corporativos en 3D, aplicaciones interactivas y experiencias de realidad virtual. 
+                    Combinamos diversas tecnologías y áreas creativas para desarrollar soluciones personalizadas que se ajusten a los retos 
+                    específicos de nuestros clientes. Nuestro propósito es acelerar su transformación digital, ofreciendo servicios a medida 
+                    que mejoran la seguridad, la eficiencia operativa, la comunicación y la productividad en sus entornos industriales.
+                </div>
+                
+                
+                
+                <a
+                    href="https://maps.app.goo.gl/"
+                    class="btn tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2 max-md:tw-mx-auto"
+                >
+                    <span>Hablemos .</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div></div>
+        </section>
+
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-bg-[#fff] tw-p-[5%] max-md:tw-px-[5%]"
+                 id="servicios"
+        >
+            <h2 class="roboto-regular-italic tw-text-xl tw-italic">
+                Nuestro propósito es acelerar su transformación digital
+            </h2>
+            <h3 class="primary-text-color tw-text-4xl tw-font-semibold">
+                Servicios
+            </h3>
+
+            <div
+                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-5 max-md:tw-flex-wrap"
+            >
+                <div
+                    class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-5 tw-overflow-clip md:tw-max-h-[700px]"
+                >
+                    <div class="tw-flex tw-gap-5 max-md:tw-flex-col">
+                        <div
+                            class="menu-item-container tw-relative tw-h-[450px] tw-w-[80%] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                        >
+                            <img
+                                src="./assets/images/homepage/Items_3d-v2.jpg"
+                                alt="3D"
+                                class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            />
+
+                            <div class="menu-btn tw-text-xl">3D</div>
+                        </div>
+                        <div
+                            class="menu-item-container tw-relative tw-h-[450px] tw-w-[80%] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                        >
+                            <img
+                                src="./assets/images/homepage/Items_caex.jpg"
+                                alt="industria"
+                                class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                            />
+
+                            <div class="menu-btn tw-text-xl">Industria</div>
+                        </div>
+                    </div>
+                    <div
+                        class="menu-item-container tw-relative tw-h-[250px] tw-w-full tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                    >
+                        <img
+                            src="./assets/images/homepage/Items_vr.jpg"
+                            alt="aaaa"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                        />
+
+                        <div class="menu-btn tw-text-xl">VR</div>
+                    </div>
+                </div>
+                <div class="tw-flex tw-flex-col tw-gap-5 md:tw-h-[700px]">
+                    <div
+                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                    >
+                        <img
+                            src="./assets/images/homepage/Items_edicion.jpg"
+                            alt="edicion"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                        />
+
+                        <div class="menu-btn tw-text-xl">Edición</div>
+                    </div>
+                    <div
+                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[350px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                    >
+                        <img
+                            src="./assets/images/homepage/Items_Cel.jpg"
+                            alt="App"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                        />
+
+                        <div class="menu-btn tw-text-xl">Aplicaciones</div>
+                    </div>
+                    <div
+                        class="menu-item-container tw-relative tw-h-[33%] tw-w-[351px] tw-cursor-pointer tw-overflow-clip tw-rounded-lg max-md:tw-w-full"
+                    >
+                        <img
+                            src="./assets/images/homepage/items_Edit.jpg"
+                            alt="Placement"
+                            class="tw-h-full tw-w-full tw-object-cover tw-transition-[scale] tw-duration-[0.4s]"
+                        />
+
+                        <div class="menu-btn tw-text-xl">Placement</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </section>
+
+        <section
+            class="tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-overflow-hidden tw-bg-[#EFEFEF] tw-p-4 tw-px-[10%] max-md:tw-flex-col"
+            id="contacto"
+        >
+            <div
+                class="tw-flex tw-h-[350px] tw-w-[350px] tw-overflow-hidden tw-rounded-md max-md:tw-hidden"
+            >
+                <img
+                    src="./assets/images/homepage/Items_3d-a.png"
+                    alt="LOGOcolor"
+                    class="tw-w-full tw-object-cover"
+                />
+            </div>
+            <div class="tw-mt-[5%] tw-flex tw-h-full tw-flex-col tw-gap-[5%]">
+                <div class="tw-flex tw-flex-col tw-gap-2">
+                    <h2
+                        class="roboto-black primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-xl"
+                    >
+                        REX MEDIA
+                    </h2>
+                    <h3 class="roboto-regular tw-text-5xl max-md:tw-text-3xl">
+                        Contacto
+                    </h3>
+                </div>
+                <form
+                    class="tw-mt-4 tw-flex tw-max-w-[350px] tw-flex-col tw-gap-3"
+                >
+                    <div class="tw-flex tw-flex-col tw-gap-4">
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-text-gray-500">Nombre</div>
+                            <input
+                                type="text"
+                                class="input"
+                                maxlength="10"
+                                required
+                                placeholder="nombre"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-text-gray-500">Telefono</div>
+                            <input
+                                type="text"
+                                class="input"
+                                required
+                                placeholder="telefono"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-text-gray-500">Email</div>
+                            <input
+                                type="email"
+                                class="input"
+                                required
+                                placeholder="email"
+                                id="email"
+                            />
+                        </div>
+                        <div class="tw-flex tw-flex-col tw-gap-1">
+                            <div class="tw-text-gray-500">Asunto</div>
+                            <input
+                                type="text"
+                                class="input"
+                                maxlength="100"
+                                placeholder="Asunto"
+                            />
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Aquí va el reCAPTCHA de Google -->
+        <div class="g-recaptcha" data-sitekey="6LeVdHgqAAAAANX_pWmcAvC_BlEOyh_yKGJwU5rm"></div>
+
+                    <button
+                        type="submit"
+                        class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Enviar .</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </form>
+                
+            </div>
+        </section>
+
+        
+        <!-- Referencias
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]"
+        >
+            <h3
+                class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
+            >
+                Nuestros clientes
+            </h3>
+
+            <div
+                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-[5%]"
+            >
+                <div class="review-container tw-flex tw-flex-col">
+                    <div class="tw-flex !tw-h-[150px] tw-max-w-[550px]">
+                        <div
+                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
+                        >
+                            <q class="tw-italic tw-text-gray-600">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Quaerat veritatis assumenda
+                                dolor delectus laborum odio consequatur
+                                accusantium quam? Ad, odit.
+                            </q>
+                            <div class="tw-mt-2 tw-text-yellow-400">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="tw-mt-3">- Trich B</p>
+                        </div>
+
+                        <div
+                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
+                        >
+                            <q class="tw-italic tw-text-gray-600">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Totam, sint.
+                            </q>
+                            <div class="tw-mt-2 tw-text-yellow-400">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="tw-mt-3">- Bára Müllerová</p>
+                        </div>
+
+                        <div
+                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
+                        >
+                            <q class="tw-italic tw-text-gray-600">
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Dolore sapiente possimus
+                                quibusdam nesciunt, architecto distinctio.
+                            </q>
+                            <div class="tw-mt-2 tw-text-yellow-400">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="tw-mt-3">- Matt freeman</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation dots 
+                    <div class="dots-container tw-mt-auto">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </section>
+        
+        Referencias -->
+
+        
+        
+        <!-- Newsletter
+        <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#EFEFEF] tw-p-[5%] tw-px-[10%]"
+        >
+            <div
+                class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
+            >
+                <h2 class="primary-text-color tw-text-3xl max-md:tw-text-xl">
+                    Special Newsletter signup
+                </h2>
+                <h2 class="tw-text-xl max-md:tw-text-lg">
+                    Get offers and updates
+                </h2>
+
+                <div
+                    class="input tw-flex tw-h-[50px] tw-place-items-center tw-overflow-hidden !tw-rounded-full tw-bg-white tw-p-2"
+                >
+                    <input
+                        type="email"
+                        class="tw-h-full tw-w-full tw-px-3 tw-outline-none"
+                        placeholder="email"
+                    />
+                    <button
+                        class="btn tw-h-[35px] tw-bg-primary tw-transition-colors tw-duration-[0.3s]"
+                    >
+                        Signup
+                    </button>
+                </div>
+            </div>
+</section>
+            Newsletter -->
+            
+            
+            
+            
+        
+
+        <div
+            class="tw-fixed tw-left-[50%] tw-top-[50%] tw-z-40 tw-flex tw-hidden tw-max-h-[450px] tw-w-[450px] tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-rounded-md tw-bg-white tw-p-3 tw-shadow-2xl max-md:tw-w-[350px]"
+            id="modal"
+        >
+            <div class="tw-relative tw-h-[40px] tw-w-full">
+                <button
+                    class="bi bi-x tw-absolute tw-right-2 tw-text-4xl"
+                    id="modal-close"
+                ></button>
+            </div>
+            <h2
+                class="tw-mt-[5%] tw-text-center tw-text-2xl"
+                id="modal-title"
+            ></h2>
+
+            <div
+                class="tw-mt-2 tw-text-base tw-font-normal"
+                id="modal-description"
+            ></div>
+
+            <textarea
+                id="modal-input"
+                placeholder="write..."
+                maxlength="2000"
+                class="input tw-mt-2 tw-hidden tw-max-h-[150px] tw-min-h-[50px] tw-w-full tw-resize-y tw-text-base tw-font-normal"
+            ></textarea>
+
+            <div class="tw-mt-3 tw-flex tw-w-full tw-place-content-center">
+                <a
+                    href="#"
+                    class="btn tw-cursor-pointer tw-text-sm"
+                    id="modal-action-btn"
+                >
+                    Open
+                </a>
+            </div>
+        </div>
+
+        <footer
+            style="background-color: #738595" class="tw-flex tw-w-full tw-place-content-around tw-gap-3  tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/logo/RM-Logo-color.svg"
+                    alt="logo"
+                    srcset=""
+                    class="tw-max-w-[200px]"
+                />
+                <div>
+                    calle
+                    <br />
+                    of,
+                    <br />
+                    Providencia,
+                    <br />
+                    Chile
+                </div>
+                <div class="tw-mt-3 tw-text-lg tw-font-semibold">Síganos</div>
+                <div class="tw-flex tw-gap-4 tw-text-2xl">
+                    <a href="https://www.youtube.com/@REXmedia3D" aria-label="youtube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/rexmedia3d/"
+                        aria-label="instagram"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Servicios</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="" class="footer-link">Divulgación</a>
+                    <a href="" class="footer-link">Capacitacion</a>
+                    <a href="" class="footer-link">Recreación</a>
+                    <a href="" class="footer-link">Desarrollo</a>
+                    <a href="" class="footer-link">VR</a>
+                </div>
+            </div>
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Secciones</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="#nosotros" class="footer-link">Nosotros</a>
+                    <a href="#servicios" class="footer-link">Servicios</a>
+                    <a href="#contacto" class="footer-link">Contacto</a>
+                    <a href="" class="footer-link">Subir</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./scripts/utils.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- https://github.com/PaulleDemon -->
+</html>
