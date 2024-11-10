@@ -11,7 +11,7 @@ NOTE: This is Slider style file. All Slider related style included in this file.
   width: 100%;
 }
 .slick-caption {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
   opacity: 1;
