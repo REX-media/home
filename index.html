@@ -6,6 +6,8 @@
 	<title>REX media</title>
 	<meta name="description" content="Innovación, tecnología y conexión sin límites.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="js/reflexiones.js"></script>
 
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -21,6 +23,12 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
+    <!-- reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- CSS del formulario -->
+<link rel="stylesheet" href="css/contact-form.css">
 </head>
 
 <body>
@@ -694,74 +702,74 @@
 			
 			
             
-            <!-- Start of contact area 
-			<div id="contact" class="contact-area gray-bg ptb-130">
-				<div class="container">
-					<div class="row">
-						<form id="contact-form" action="mail.php" method="post" class="col-lg-8 col-12">
-							<div class="row all-contact-text">
-								<div class="col-md-6 col-12">
-									<div class="main-contact">
-										<input name="con_name" id="con_name" class="form-control" type="text"
-											required="" placeholder="Nombre">
-									</div>
-								</div>
-								<div class="col-md-6 col-12">
-									<div class="main-contact">
-										<input name="con_email" id="con_email" class="form-control" type="email"
-											required="" placeholder="Email">
-									</div>
-								</div>
-								<div class="col-md-6 col-12">
-									<div class="main-contact">
-										<input name="con_phone" id="con_phone" class="form-control" type="text"
-											required="" placeholder="Telefono">
-									</div>
-								</div>
-								<div class="col-md-6 col-12">
-									<div class="main-contact contact-mrgn">
-										<input name="con_subject" id="con_subject" class="form-control" type="text"
-											required="" placeholder="Asunto">
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="tnm-textarea">
-										<textarea name="con_message" id="con_message" class="form-control" required=""
-											placeholder="Mensaje"></textarea>
-									</div>
-									<div class="submit">
-										<input class="submit" type="submit" value="Enviar mensaje">
-									</div>
-								</div>
-							</div>
-						</form>
-						<div class="col-lg-4 col-12">
-							<div class="fotter-single-area res-contact">
-								<h3 class="leave-comment-text" style="color: #758595">Información de contacto</h3>
-								<div class="contact-details">
-									<ul>
-										<li>
-											<img src="img/icon/c1.png" alt="" />
-											<p>Providencia, Santiago de Chile</p>
-										</li>
-										<li>
-											<img src="img/icon/c2.png" alt="" />
-											<p> +56 9 6515 3106 <br> +56 9 9070 9032</p>
-										</li>
-										<li>
-											<img src="img/icon/c3.png" alt="" />
-											<p>mauricio.lara@rex-media.cl </p>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<p class="form-messege"></p>
-					</div>
-				</div>
-			</div>
-			
-			 End of contact area -->
+            <!-- Start of contact area -->
+<div id="contact" class="contact-area gray-bg ptb-130">
+    <div class="container">
+        <div class="row">
+            <form id="contact-form" action="enviar_contacto.php" method="post" class="col-lg-8 col-12">
+                <div class="row all-contact-text">
+                    <div class="col-md-6 col-12">
+                        <div class="main-contact">
+                            <input name="nombre" id="nombre" class="form-control" type="text" required placeholder="Nombre *">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="main-contact">
+                            <input name="email" id="email" class="form-control" type="email" required placeholder="Email *">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="main-contact">
+                            <input name="telefono" id="telefono" class="form-control" type="text" placeholder="Teléfono">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="main-contact contact-mrgn">
+                            <input name="asunto" id="asunto" class="form-control" type="text" required placeholder="Asunto *">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="tnm-textarea">
+                            <textarea name="mensaje" id="mensaje" class="form-control" required placeholder="Mensaje *"></textarea>
+                        </div>
+                        
+                        <!-- reCAPTCHA -->
+                        <div class="recaptcha-container" style="margin: 20px 0;">
+                            <div class="g-recaptcha" data-sitekey="6LeVdHgqAAAAANX_pWmcAvC_BlEOyh_yKGJwU5rm"></div>
+                        </div>
+                        
+                        <div class="submit">
+                            <input class="submit-btn" type="submit" value="Enviar mensaje">
+                        </div>
+                        
+                        <!-- Mensaje de respuesta -->
+                        <div class="form-message" style="margin-top: 15px;"></div>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="col-lg-4 col-12">
+                <div class="fotter-single-area res-contact">
+                    <h3 class="leave-comment-text" style="color: #758595">Información de contacto</h3>
+                    <div class="contact-details">
+                        <ul>
+                            <li>
+                                <img src="img/icon/c1.png" alt="" />
+                                <p>Providencia, Santiago de Chile</p>
+                            </li>
+                            
+                            <li>
+                                <img src="img/icon/c3.png" alt="" />
+                                <p>mauricio.lara@rex-media.cl </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of contact area -->
             
             
 		</div>
@@ -807,10 +815,7 @@
 											<img src="img/icon/c1.png" alt="" />
 											<p> Providencia, Santiago de Chile</p>
 										</li>
-										<li>
-											<img src="img/icon/c2.png" alt="" />
-											<p> +56 9 6515 3106 | +56 9 9070 9032</p>
-										</li>
+										
 										<li>
 											<img src="img/icon/c3.png" alt="" />
 											<p> mauricio.lara@rex-media.cl</p>
@@ -880,11 +885,16 @@
 	<!-- Page Wraper Here Start -->
 
 	<!-- all js here -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script src="js/vendor/jquery-1.12.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/ajax-mail.js"></script>
 	<script src="js/plugins.js"></script>
+        
+        <!-- JavaScript del formulario -->
+        <script src="js/contact-form.js"></script>
+        
 	<!-- google map api -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qDiT4MyM7IxaGPbQyLnMjVUsJck02N0"></script>
 	<script>
