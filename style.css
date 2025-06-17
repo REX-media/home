@@ -1135,7 +1135,6 @@ button.submit:hover {
       max-width: 1170px;
   }
 }
-
 /* =============================================================================
    FIX ESPECÍFICO SOLO PARA IMÁGENES DEL SLIDER - REX MEDIA
    SOLO arregla las imágenes de fondo sin afectar otros elementos
@@ -1182,5 +1181,119 @@ button.submit:hover {
     .slider.slider-for .slider-item.slickslider {
         height: 60vh;
         min-height: 400px;
+    }
+}
+
+
+
+
+/* =============================================================================
+   FIX PARA VIDEO RESPONSIVO EN SECCIÓN ABOUT US - REX MEDIA
+   Soluciona el problema del iframe que se descuadra en tablets y móviles
+============================================================================= */
+
+/* Contenedor responsivo para el video */
+.about-left {
+    position: relative;
+    width: 100%;
+}
+
+/* Wrapper responsivo para el iframe */
+.about-left iframe {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16/9; /* Mantiene la proporción del video */
+}
+
+/* Fallback para navegadores que no soportan aspect-ratio */
+@supports not (aspect-ratio: 16/9) {
+    .about-left {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .about-left iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Ajustes específicos para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    .about-left iframe {
+        height: 280px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-left {
+        padding-top: 30px; /* Reducir padding en tablets */
+        margin-bottom: 30px; /* Espacio antes del texto */
+    }
+    
+    .about-left iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-left {
+        padding-top: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .about-left iframe {
+        height: 220px;
+    }
+    
+    /* Asegurar que en móvil el texto no se monte sobre el video */
+    .about-right {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-left {
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .about-left iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-left iframe {
+        height: 180px;
+    }
+}
+
+/* Asegurar que el video no se desborde del contenedor padre */
+.aboutus-area .container {
+    overflow-x: hidden;
+}
+
+/* Fix adicional para la estructura de columnas en móvil */
+@media (max-width: 991px) {
+    .aboutus-area .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .aboutus-area .col-lg-6:first-child {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .aboutus-area .col-lg-6:last-child {
+        order: 2;
     }
 }
