@@ -1135,3 +1135,52 @@ button.submit:hover {
       max-width: 1170px;
   }
 }
+
+/* =============================================================================
+   FIX ESPECÍFICO SOLO PARA IMÁGENES DEL SLIDER - REX MEDIA
+   SOLO arregla las imágenes de fondo sin afectar otros elementos
+============================================================================= */
+
+/* SOLO las imágenes dentro del slider principal */
+.slider.slider-for .slider-item.slickslider > img {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Asegurar que el contenedor del slider tenga la altura correcta */
+.slider.slider-for .slider-item.slickslider {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+}
+
+/* Responsive para las imágenes del slider */
+@media (max-width: 992px) {
+    .slider.slider-for .slider-item.slickslider > img,
+    .slider.slider-for .slider-item.slickslider {
+        height: 80vh;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider.slider-for .slider-item.slickslider > img,
+    .slider.slider-for .slider-item.slickslider {
+        height: 70vh;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider.slider-for .slider-item.slickslider > img,
+    .slider.slider-for .slider-item.slickslider {
+        height: 60vh;
+        min-height: 400px;
+    }
+}
