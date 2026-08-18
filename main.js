@@ -551,9 +551,7 @@
     function showMsg(t,c){ msgBox.innerHTML='<div class="alert alert-'+c+'">'+t+'</div>'; setTimeout(function(){msgBox.innerHTML='';},6000); }
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      if(typeof grecaptcha==='undefined'){ showMsg('reCAPTCHA no se pudo cargar.','error'); return; }
-      var rc=grecaptcha.getResponse();
-      if(!rc){ showMsg('Completa la verificación.','error'); return; }
+      if(typeof grecaptcha!=='undefined') grecaptcha.reset();
       var fd=new FormData(form); fd.append('_captcha','true');
       showMsg('Enviando...','info');
       fetch('https://formspree.io/f/maqpkdnw',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(d){
