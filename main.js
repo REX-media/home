@@ -554,10 +554,12 @@
       if(typeof grecaptcha!=='undefined') grecaptcha.reset();
       var fd=new FormData(form); fd.append('_captcha','true');
       showMsg('Enviando...','info');
-      fetch('https://formspree.io/f/maqpkdnw',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(d){
-        if(d.ok){ showMsg('¡Mensaje enviado!','success'); form.reset(); grecaptcha.reset(); }
-        else showMsg(d.message||'Error al enviar.','error');
-      }).catch(function(){ showMsg('Error de conexión.','error'); });
+      fetch('https://formspree.io/f/maqpkdnw',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){
+        if(!r.ok) return r.text().then(function(t){throw new Error(t);});
+        return r.json();
+      }).then(function(d){
+        showMsg('¡Mensaje enviado!','success'); form.reset();
+      }).catch(function(){ showMsg('Error al enviar. Intenta de nuevo.','error'); });
     });
   }
 })();
