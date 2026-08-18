@@ -548,18 +548,22 @@
     var form = document.getElementById('contactForm');
     var msgBox = document.getElementById('formMsg');
     if(!form) return;
+    var sending = false;
     function showMsg(t,c){ msgBox.innerHTML='<div class="alert alert-'+c+'">'+t+'</div>'; setTimeout(function(){msgBox.innerHTML='';},6000); }
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      if(typeof grecaptcha!=='undefined') grecaptcha.reset();
-      var fd=new FormData(form); fd.append('_captcha','true');
+      if(sending) return;
+      sending = true;
+      var fd=new FormData(form);
       showMsg('Enviando...','info');
       fetch('https://formspree.io/f/maqpkdnw',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){
-        if(!r.ok) return r.text().then(function(t){throw new Error(t);});
-        return r.json();
-      }).then(function(d){
-        showMsg('¡Mensaje enviado!','success'); form.reset();
-      }).catch(function(){ showMsg('Error al enviar. Intenta de nuevo.','error'); });
+        sending = false;
+        if(r.ok){ showMsg('¡Mensaje enviado!','success'); form.reset(); }
+        else showMsg('Error al enviar. Intenta de nuevo.','error');
+      }).catch(function(){
+        sending = false;
+        showMsg('Error de conexión.','error');
+      });
     });
   }
 })();
