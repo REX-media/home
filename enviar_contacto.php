@@ -24,7 +24,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // ---- reCAPTCHA v2 verification ----
-$recaptcha_secret = '6LcioowtAAAAAJPNwZkgN8_ndUXxYUrio91aeHA5';
+$recaptcha_secret = '6Lfzo4wtAAAAAFz7ar5uDzVExzWRQQIIJFzLd910';
 
 $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, stream_context_create([
     'http' => [
