@@ -554,10 +554,10 @@
       if(typeof grecaptcha==='undefined'){ showMsg('reCAPTCHA no se pudo cargar.','error'); return; }
       var rc=grecaptcha.getResponse();
       if(!rc){ showMsg('Completa la verificación.','error'); return; }
-      var fd=new FormData(form); fd.append('recaptcha_response',rc);
+      var fd=new FormData(form); fd.append('_captcha','true');
       showMsg('Enviando...','info');
-      fetch('enviar_contacto.php',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(d){
-        if(d.success){ showMsg('¡Mensaje enviado!','success'); form.reset(); grecaptcha.reset(); }
+      fetch('https://formspree.io/f/maqpkdnw',{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(d){
+        if(d.ok){ showMsg('¡Mensaje enviado!','success'); form.reset(); grecaptcha.reset(); }
         else showMsg(d.message||'Error al enviar.','error');
       }).catch(function(){ showMsg('Error de conexión.','error'); });
     });
