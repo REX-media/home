@@ -24,7 +24,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // ---- reCAPTCHA v2 verification ----
-$recaptcha_secret = 'TU_SECRET_KEY_AQUI'; // <- Reemplazar con tu secret key de reCAPTCHA
+$recaptcha_secret = '6LcioowtAAAAAJPNwZkgN8_ndUXxYUrio91aeHA5';
 
 $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, stream_context_create([
     'http' => [
